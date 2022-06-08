@@ -1,5 +1,8 @@
 *{
     box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    
+    
 
 }
 header{
@@ -43,7 +46,7 @@ button{
     align-items: center;
     justify-content: center;
     padding: 75px 20px;
-    background-image: url(../assets/maarten-deckers-8RU1Ei3KcPw-unsplash.jpg);
+    background-image:#344851;
     border-radius: 50px;
     
     
@@ -63,6 +66,45 @@ button{
 
 }
 
+.exp{
+    
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.text, span{
+    font-size: 60px;
+}
+
+.type ul{
+    height: 100px;
+    list-style : none;
+    overflow: hidden;
+}
+
+.type ul li{
+    position: relative;
+    height: 100px;
+
+    animation: to-top 12s steps(4) infinite;
+}
+
+ul li span{
+  color : rgb(39, 217, 8);
+}
+
+ul li::after{
+    content: '';
+    position: absolute;
+    background: none;
+   
+
+
+    animation: to-right 3s steps(19) infinite;
+}
+
+
+
 .proj{
     
     align-items: center;
@@ -76,13 +118,30 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 50px 0px;
 
 
 }
 .proj .projlist img{
-    padding-left: 0px;
-    height: 300px;
+    padding-left: 10px;
+    height: 250px;
     width: 400px;
 
 }
 
+@keyframes to-right{
+    40%, 60%{
+        left: calc(100% + 50px);
+    }
+    95%{
+        left: 0;
+    }
+}
+
+@keyframes to-top {
+    100%{
+        transform: translateY(-400% );
+        /* OR 
+         transform: translateY(calc(-100px * 4)); */ 
+  }
+}
